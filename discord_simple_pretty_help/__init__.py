@@ -3,9 +3,14 @@ from discord.ext import commands
 
 class SimplePrettyHelp(commands.HelpCommand):
 
-    def __init__(self, color=0x5865F2):
+    def __init__(
+        self,
+        color=0x5865F2,
+        footer={"text": "For more information on a command : !help [command]"}
+    ):
         super().__init__()
         self.color = color
+        self.footer = footer
     
     async def send_bot_help(self, mapping):
         """Main help menu"""
@@ -26,7 +31,7 @@ class SimplePrettyHelp(commands.HelpCommand):
                 }
                 for cog, commands in mapping.items()
             ],
-            "footer": {"text": "For more information on a command : !help [command]"}
+            "footer": self.footer
         }))
 
     async def send_command_help(self, command):
@@ -107,7 +112,7 @@ class SimplePrettyHelp(commands.HelpCommand):
                     )
                 }
             ],
-            "footer": {"text": "For more information on a command : !help [command]"}
+            "footer": self.footer
         }))
 
     async def send_cog_help(self, cog):
@@ -128,5 +133,5 @@ class SimplePrettyHelp(commands.HelpCommand):
                         for command in cog.get_commands()) 
                 }
             ],
-            "footer": {"text": "For more information on a command : !help [command]"}
+            "footer": self.footer
         }))
