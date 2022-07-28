@@ -2,6 +2,15 @@
 
 A simple yet pretty help menu for discord.py bots
 
+<p align="center">
+    <table>
+        <tr>
+            <td><img src=".readme/bot_help.png"></td>
+            <td><img src=".readme/command_help.png"></td>
+        </tr>
+    </table>
+</p>
+
 ## Installation
 
 ```
