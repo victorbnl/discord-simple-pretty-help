@@ -5,8 +5,8 @@ A simple yet pretty help menu for discord.py bots
 <p align="center">
     <table>
         <tr>
-            <td><img src=".readme/bot_help.png"></td>
-            <td><img src=".readme/command_help.png"></td>
+            <td><img src="https://raw.githubusercontent.com/victorbnl/discord-simple-pretty-help/main/.readme/bot_help.png"></td>
+            <td><img src="https://raw.githubusercontent.com/victorbnl/discord-simple-pretty-help/main/.readme/command_help.png"></td>
         </tr>
     </table>
 </p>
