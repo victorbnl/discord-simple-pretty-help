@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class MyHelp(commands.HelpCommand):
+class SimplePrettyHelp(commands.HelpCommand):
 
     def __init__(self, color=0x5865F2):
         super().__init__()
