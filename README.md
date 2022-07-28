@@ -2,6 +2,12 @@
 
 A simple yet pretty help menu for discord.py bots
 
+## Installation
+
+```
+pip install git+https://github.com/victorbnl/discord-simple-pretty-help
+```
+
 ## Usage
 
 ```py
