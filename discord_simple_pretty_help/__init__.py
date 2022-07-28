@@ -12,7 +12,6 @@ class SimplePrettyHelp(commands.HelpCommand):
 
         await self.get_destination().send(embed=discord.Embed.from_dict({
             "color": self.color,
-            "footer": {"text": "For more information on a command : !help [command]"},
             "fields": [
                 {
                     "name": getattr(cog, "qualified_name", "Others"),
@@ -26,7 +25,8 @@ class SimplePrettyHelp(commands.HelpCommand):
                     "inline": False
                 }
                 for cog, commands in mapping.items()
-            ]
+            ],
+            "footer": {"text": "For more information on a command : !help [command]"}
         }))
 
     async def send_command_help(self, command):
@@ -106,7 +106,8 @@ class SimplePrettyHelp(commands.HelpCommand):
                         + [f"`{alias}`" for alias in group.aliases]
                     )
                 }
-            ]
+            ],
+            "footer": {"text": "For more information on a command : !help [command]"}
         }))
 
     async def send_cog_help(self, cog):
@@ -126,5 +127,6 @@ class SimplePrettyHelp(commands.HelpCommand):
                         )
                         for command in cog.get_commands()) 
                 }
-            ]
+            ],
+            "footer": {"text": "For more information on a command : !help [command]"}
         }))
