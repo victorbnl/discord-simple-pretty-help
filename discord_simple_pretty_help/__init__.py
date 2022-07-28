@@ -34,7 +34,7 @@ class SimplePrettyHelp(commands.HelpCommand):
 
         await self.get_destination().send(embed=discord.Embed.from_dict({
             "color": self.color,
-            "title": command.name.capitalize(),
+            "title": command.name,
             "description": command.brief or "",
             "fields": [
                 {
